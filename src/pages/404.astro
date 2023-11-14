@@ -1,0 +1,42 @@
+---
+import Layout from "@layouts/home.astro";
+---
+
+<Layout
+    title="Error 404. Página no encontrada. Carlos Delbarre :: FrontEnd Developer"
+>
+    <section
+        class="container h-full mx-auto !max-w-lg px-6 py-8 md:px-10 md:py-16 text-center space-y-6 flex flex-col"
+    >
+        <img
+            src="/assets/images/error-404.webp"
+            alt="error 404"
+            loading="lazy"
+            class="max-h-96"
+        />
+        <h1 class="text-3xl font-bold">Something is wrong</h1>
+        <p>
+            The page you are looking for was moved, removed, renamed or might
+            never existed.
+        </p>
+        <a
+            href="/"
+            class="text-white bg-blue-700 p-3 rounded-full self-center rotate-45 hover:scale-105 transition duration-200"
+        >
+            <svg
+                width="20px"
+                height="20px"
+                fill="none"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                color="currentColor"
+                ><path
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 21V3m0 0 8.5 8.5M12 3l-8.5 8.5"></path></svg
+            >
+        </a>
+    </section>
+</Layout>

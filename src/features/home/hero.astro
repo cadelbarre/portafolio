@@ -1,0 +1,62 @@
+---
+import HeroButtons from "./hero-buttons.astro";
+
+const currentExperiencieYears = new Date().getFullYear() - 2020;
+---
+
+<script>
+    import { annotate } from "rough-notation";
+
+    const e = document.querySelector("#main-technology") as HTMLElement;
+    const annotation = annotate(e, {
+        type: "highlight",
+        color: "#FFF176",
+    });
+    setTimeout(() => {
+        annotation.show();
+    }, 1000);
+</script>
+
+<section class="flex items-center justify-between flex-col relative min-height">
+    <img
+        src="/assets/images/example-profile.png"
+        alt="profile-image"
+        class="h-56 w-56 sm:h-72 sm:w-72 mt-10 rounded-full lg:mt-0 lg:rounded-none object-cover justify-self-center lg:h-full md:object-cover top-0 right-0 -z-10 lg:w-3/5 lg:[clip-path:polygon(31%_0,100%_0%,100%_100%,0%_100%)] lg:absolute"
+    />
+    <div
+        class="container h-full mx-auto !max-w-7xl px-6 py-4 md:px-10 lg:py-16"
+    >
+        <div class="grid lg:grid-cols-2 place-content-center h-full">
+            <div class="space-y-6">
+                <header>
+                    <h5 class="text-slate-600 text-2xl mb-1">
+                        Hi! I’m Carlos Delbarre
+                    </h5>
+                    <h1
+                        class="text-3xl sm:text-4xl md:text-5xl font-bold [text-wrap:balance]"
+                    >
+                        <span class="font-bold">Front-end Developer</span> focus
+                        in design and Javascript ecosystem
+                    </h1>
+                </header>
+                <p class="[text-wrap:balance] max-w-[55ch]">
+                    Like to build friendly web applications using <span
+                        id="main-technology"
+                        class="font-bold [text-wrap:nowrap]"
+                        >React and Typescript.</span
+                    > Currently, I’ve been maintaining 4 projects since {
+                        currentExperiencieYears
+                    } years ago. In addition, I’m passionate about photography. 📷
+                </p>
+
+                <HeroButtons />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .min-height {
+        height: min(100dvh, 44rem);
+    }
+</style>

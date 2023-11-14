@@ -1,3 +1,19 @@
 {
-  "extends": "astro/tsconfigs/base"
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "baseUrl": "/Users/carlosdelbarre/Documents/Projectos/3. Paginas Web /portafolio-astro",
+    "paths": {
+      "@components/*": [
+        "src/features/*"
+      ],
+      "@assets/*": [
+        "public/assets/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
 }

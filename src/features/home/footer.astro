@@ -1,0 +1,44 @@
+---
+import FooterSocial from "./footer-social.astro";
+---
+
+<script>
+    import { annotate } from "rough-notation";
+
+    const e = document.querySelector("#contactme") as HTMLElement;
+    const annotation = annotate(e, {
+        type: "box",
+        color: "#C94028",
+    });
+
+    const cb = (elements, observer) => {
+        elements.forEach((element) => {
+            if (element.isIntersecting) {
+                annotation.show();
+            }
+        });
+    };
+
+    const observerElement = new IntersectionObserver(cb, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+    });
+
+    observerElement.observe(e);
+</script>
+
+<footer class="pt-12 pb-24 px-6 text-white bg-blue-800">
+    <div class="flex flex-col text-center space-y-6">
+        <p>
+            Feel free to <span class="font-bold" id="contactme">
+                <a href="mailto:cadelbarre@gmail.com" class="text-white"
+                    >contact me</a
+                >
+            </span> if you're looking for a front-end developer with foundation in
+            design.
+        </p>
+
+        <FooterSocial />
+    </div>
+</footer>

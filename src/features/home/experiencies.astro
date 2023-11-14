@@ -1,0 +1,108 @@
+---
+const techTools = [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "NextJs",
+    "Astro",
+    "Testing Library/Jest",
+    "REST API's",
+    "HTML",
+    "CSS/Sass",
+    "eslint",
+    "StandardJS",
+    "Figma",
+];
+---
+
+<section
+    class="container h-full mx-auto !max-w-7xl px-6 py-8 md:px-10 md:py-16"
+>
+    <header class="text-center mx-auto mb-12">
+        <h5 class="italic text-xl text-blue-600 mb-2">Work experiences</h5>
+        <h3 class="text-3xl md:text-4xl">
+            <span class="font-bold">Working</span>
+            for a great company
+        </h3>
+    </header>
+
+    <div class="grid md:grid-cols-2 gap-x-4">
+        <div class="mb-10 md:mb-0">
+            <h4 class="text-lg md:text-xl font-bold text-slate-700 mb-2">
+                Web Designer & Front-end Developer
+            </h4>
+            <p class="italic font-semibold">Comercializadora ZEYMA SAS</p>
+            <p>Medicine Distributor, Barranquilla (Colombia)</p>
+            <p>Septembre 2020 - Present</p>
+
+            <h4 class="font-bold text-slate-700 mt-4 mb-1">Tech Tools</h4>
+            <div class="space-x-2 space-y-2 [text-wrap:balance]">
+                {
+                    techTools.map((tech) => (
+                        <span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 hover:ring-blue-500 transition-color duration-200">
+                            {tech}
+                        </span>
+                    ))
+                }
+            </div>
+        </div>
+        <div class="space-y-10">
+            <article>
+                <h5 class="uppercase text-md md:text-lg mb-2 font-bold">
+                    WORK AND RESPONSABILITIES
+                </h5>
+                <ul class="ml-6 my-2 space-y-1 list-disc">
+                    <li>
+                        Design and implement new functionalities to existing
+                        applications.
+                    </li>
+                    <li>
+                        Maintenance of current applications. Fix error that
+                        allow to increase the performance of webapps.
+                    </li>
+                    <li>
+                        Train staff in the management of new functionalities.
+                    </li>
+                    <li>
+                        Coordinate with different areas the required requests.
+                    </li>
+                    <li>
+                        Optimize components in React for better performance.
+                    </li>
+                    <li>
+                        Create applications with NodeJs that allows obtaining
+                        data from the local database to regenerate custom
+                        reports.
+                    </li>
+                    <li>
+                        Maintenance of the application created in NodeJS in
+                        charge of electronic invoicing.
+                    </li>
+                </ul>
+            </article>
+
+            <article>
+                <h5 class="uppercase text-md md:text-lg mb-2 font-bold">
+                    KEY ACCOMPLISHMENTS
+                </h5>
+                <ul class="ml-6 my-2 space-y-2 list-disc">
+                    <li>
+                        Improved the database update to a webapp by reducing
+                        update time from 5 minutes to 10 seconds, by using more
+                        efficient techniques from the local database.
+                    </li>
+                    <li>
+                        Improved the company efficiency by reducing delivery
+                        time, using a webapp where clients can send purchases
+                        orders to the offices with a real-time stock.
+                    </li>
+                    <li>
+                        Improved company website’s performance by increasing
+                        fast loading from 5 sec to 1.5 sec, by implementing
+                        astro techonology and lazy loading in all images.
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>

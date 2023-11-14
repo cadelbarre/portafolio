@@ -1,0 +1,50 @@
+---
+interface ItemProps {
+    title: string;
+    caption: string;
+    image: string;
+    url?: string
+}
+
+interface Props {
+    item: ItemProps;
+}
+
+const { item } = Astro.props;
+---
+
+<article>
+    <img
+        src={`/assets/images${item.image}`}
+        alt=""
+        class="rounded-xl [aspect-ratio:4/3]"
+        loading="lazy"
+    />
+    <div class="mt-4 flex justify-between items-center">
+        <div>
+            <h4 class="font-bold text-lg">{item.title}</h4>
+            <span class="text-sm font-light">{item.caption}</span>
+        </div>
+        <a
+            href={item.url ?? `/assets/images${item.image}`}
+            target="_blank"
+            class="text-white bg-blue-700 p-3 rounded-full rotate-45 hover:scale-105 transition duration-200"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                fill="none"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                color="currentColor"
+                ><path
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 21V3m0 0 8.5 8.5M12 3l-8.5 8.5"></path></svg
+            >
+        </a>
+    </div>
+</article>

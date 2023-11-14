@@ -1,0 +1,84 @@
+---
+import AboutMePhotography from "./about-me-photography";
+---
+
+<script>
+    import { annotate } from "rough-notation";
+
+    const e = document.querySelector("#photo-taken") as HTMLElement;
+    const annotation = annotate(e, {
+        type: "highlight",
+        color: "#FFF176",
+    });
+
+    const cb = (elements, observer) => {
+        elements.forEach((element) => {
+            if (element.isIntersecting) {
+                setTimeout(() => {
+                    annotation.show();
+                }, 1000);
+            }
+        });
+    };
+
+    const observerElement = new IntersectionObserver(cb, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+    });
+
+    observerElement.observe(e);
+</script>
+
+<>
+    <section
+        class="container h-full mx-auto !max-w-7xl px-6 py-8 md:px-10 md:py-16"
+    >
+        <div class="grid md:grid-cols-2 gap-x-6 mb-12 relative">
+            <div class="space-y-4 order-2 md:order-1">
+                <header>
+                    <h5 class="italic text-base text-blue-600 mb-1">
+                        Know me better
+                    </h5>
+                    <h3
+                        class="text-4xl md:text-5xl [text-wrap:balance] font-bold w-[12ch]"
+                    >
+                        Some things about me
+                    </h3>
+                </header>
+
+                <p class="max-w-[55ch]">
+                    Husband, father of a beautiful 4-year-old son and a dog,
+                    rest in peace, named Molly. I love taking time to share with
+                    my family. I love movies, and when I have some free time, I
+                    enjoy taking photos.
+                </p>
+                <p class="max-w-[55ch]">
+                    I like landscape photography, animals, and sometimes
+                    portraits. It's a way to distract the mind and do something
+                    I enjoy. Below, you can <span
+                        class="font-bold [text-wrap:nowrap]"
+                        id="photo-taken"
+                        >see some of the photos I've taken.</span
+                    >
+                </p>
+            </div>
+            <div class="m-auto order-1 md:order-last">
+                <img
+                    src="/assets/images/aboutme.webp"
+                    alt="aboutme-picture"
+                    loading="lazy"
+                    class="mb-6 md:mb-0 rounded-xl"
+                />
+            </div>
+
+            <img
+                src="/assets/svg/arrow.svg"
+                alt=""
+                class="absolute h-5 md:h-6 lg:h-7 xl:h-10 right-32 sm:left-0 -bottom-8 sm:-bottom-12 lg:bottom-0 rotate-45"
+            />
+        </div>
+
+        <AboutMePhotography client:visible />
+    </section>
+</>
