@@ -12,19 +12,43 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name='title' content='Carlos Delbarre :: FrontEnd Developer'>
-		<meta name='description' content='Like to build friendly web applications using React and Typescript. Currently, I’ve been maintaining 4 projects. In addition, I’m passionate about photography.'>
-		<meta name='keywords' content='Frontend Developer, React.js, TypeScript, CSS3, Responsive Design, Web Development, Problem Solving, Single Page Applications (SPAs), State Management, SEO Best Practices, Frontend Testing, Figma, Frontend Frameworks, Image Optimization, Performance Optimization'>
-		<meta property='og:type' content='website'>
-		<meta property='og:url' content='https://cadelbarre.com'>
-		<meta property='og:title' content='Carlos Delbarre :: FrontEnd Developer'>
-		<meta property='og:description' content='Like to build friendly web applications using React and Typescript. Currently, I’ve been maintaining 4 projects. In addition, I’m passionate about photography.'>
-		<meta property='og:image' content='Favicon'>
+		<meta name="title" content="Carlos Delbarre :: FrontEnd Developer" />
+		<meta
+			name="description"
+			content="Like to build friendly web applications using React and Typescript. Currently, I’ve been maintaining 4 projects. In addition, I’m passionate about photography."
+		/>
+		<meta
+			name="keywords"
+			content="Frontend Developer, React.js, TypeScript, CSS3, Responsive Design, Web Development, Problem Solving, Single Page Applications (SPAs), State Management, SEO Best Practices, Frontend Testing, Figma, Frontend Frameworks, Image Optimization, Performance Optimization"
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://cadelbarre.com" />
+		<meta
+			property="og:title"
+			content="Carlos Delbarre :: FrontEnd Developer"
+		/>
+		<meta
+			property="og:description"
+			content="Like to build friendly web applications using React and Typescript. Currently, I’ve been maintaining 4 projects. In addition, I’m passionate about photography."
+		/>
+		<meta property="og:image" content="Favicon" />
+		<link
+			rel="preload"
+			href="/fonts/Roboto.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/Merriweather.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-
-
