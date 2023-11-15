@@ -3,7 +3,7 @@ interface ItemProps {
     title: string;
     caption: string;
     image: string;
-    url?: string
+    url?: string;
 }
 
 interface Props {
@@ -28,7 +28,7 @@ const { item } = Astro.props;
         <a
             href={item.url ?? `/assets/images${item.image}`}
             target="_blank"
-            class="text-white bg-blue-700 p-3 rounded-full rotate-45 hover:scale-105 transition duration-200"
+            class="text-white bg-gradient-to-tl from-blue-700 to-blue-500 p-3 rounded-full rotate-45 hover:scale-105 transition duration-200"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
