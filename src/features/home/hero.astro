@@ -8,12 +8,18 @@ const currentExperiencieYears = new Date().getFullYear() - 2020;
     import { annotate } from "rough-notation";
 
     const e = document.querySelector("#main-technology") as HTMLElement;
+    const ts = document.querySelector("#main-technology-ts") as HTMLElement;
     const annotation = annotate(e, {
+        type: "highlight",
+        color: "#FFF176",
+    });
+    const annotationts = annotate(ts, {
         type: "highlight",
         color: "#FFF176",
     });
     setTimeout(() => {
         annotation.show();
+        annotationts.show();
     }, 1000);
 </script>
 
@@ -42,9 +48,14 @@ const currentExperiencieYears = new Date().getFullYear() - 2020;
                 <p class="[text-wrap:balance] max-w-[55ch]">
                     Like to build friendly web applications using <span
                         id="main-technology"
-                        class="font-bold [text-wrap:nowrap]"
-                        >React and Typescript.</span
-                    > Currently, I’ve been maintaining 4 projects since {
+                        class="font-bold [text-wrap:nowrap]">React</span
+                    >
+                    and
+                    <span
+                        id="main-technology-ts"
+                        class="font-bold [text-wrap:nowrap]">Typescript.</span
+                    >
+                    Currently, I’ve been maintaining 4 projects since {
                         currentExperiencieYears
                     } years ago. In addition, I’m passionate about photography. 📷
                 </p>
