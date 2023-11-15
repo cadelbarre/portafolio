@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://www.cadelbarre.dev/" target="_blank">
-<img src="public/assets/images/readme-shots.png" alt="Screenshot" />
+<img src="public/assets/images/readme-shots.webp" alt="Screenshot" />
 </a>
 
 </p>
