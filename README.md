@@ -1,55 +1,117 @@
-# Astro Starter Kit: Basics
+<div align="center">
+
+<a href="https://www.cadelbarre.dev/" target="_blank">
+<img src="public/assets/images/readme-shots.png" alt="Screenshot" />
+</a>
+
+</p>
+
+<div align="center">
+    <a href="https://cadelbarre.dev" target="_blank">
+        Website
+    </a>
+    <span> - </span>
+    <a href="#-getting-started">
+        Getting Started
+    </a>
+    <span> - </span>
+    <a href="#-stack">
+        Stack
+    </a>
+    <span> - </span>
+    <a href="https://x.com/cadelbarre" target="_blank">
+        X
+    </a>
+</div>
+
+</p>
+
+[![Required Node.JS >=18.2.0](https://img.shields.io/static/v1?label=node&message=%20%3E=18.2.0&logo=node.js&color=3f893e)](https://nodejs.org/about/releases)
+
+</div>
+
+## Stack
+
+- [**Astro**](https://astro.build/) 
+- [**React 18.2**](https://react.dev/) 
+- [**Tailwind CSS**](https://tailwindcss.com/)
+- [**Iconoir**](https://iconoir.com/) 
+- [**Fancybox**](https://fancyapps.com/) 
+- [**Rough Notation**](https://roughnotation.com/) 
+
+## Getting Started
+
+We recommend using the following extensions for Visual Studio Code:
+
+- [**Astro for VSCode**](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode).
+- [**Tailwind CSS IntelliSense**](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss).
+
+1. Clone the repository:
+
+```bash
+https://github.com/cadelbarre/portafolio.git 
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
+
+Open up [http://localhost:3000](http://localhost:3000) to view the website 🚀.
+
+📁 Folder structure:
 
 ```
-npm create astro@latest -- --template basics
+└── 📁 public
+    └── 📁 assets
+        └── 📁 images
+            └── 📁 photography
+            └── 📁 projects
+        └── 📁 svg
+    └── favicon.svg
+    └── 📁 fonts
+    └── 📁 pdfs
+
+└── 📁 src
+    └── env.d.ts
+    └── 📁 features
+        └── 📁 home
+            └── experiencies.astro
+            └── footer-action.astro
+            └── footer-social.astro
+            └── footer.astro
+            └── hero-buttons.astro
+            └── hero.astro
+            └── project-article.astro
+            └── projects.astro
+            └── what-i-do.astro
+    └── 📁 pages
+        └── 404.astro
+        └── index.astro
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+⚙ Commands:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
-
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command        | Action                                                  |
+| :------------- | :------------------------------------------------------ |
+| `dev`          | Starts local dev server at `localhost:3000`.            |
+| `build`        | Build site to `./dist/`.                                |
+| `preview`      | Preview your build locally, before deploying.           |
+| `astro ...`    | Run Astro CLI commands like `astro add`, `astro check`. |
+| `astro --help` | Get help using the Astro CLI.                           |
+| `format`       | Format code with Prettier.                              |
