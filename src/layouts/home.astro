@@ -11,6 +11,13 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="preload"
+			href="/fonts/Merriweather.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<meta name="title" content="Carlos Delbarre :: FrontEnd Developer" />
 		<meta
@@ -32,20 +39,6 @@ const { title } = Astro.props;
 			content="Like to build friendly web applications using React and Typescript. Currently, I’ve been maintaining 4 projects. In addition, I’m passionate about photography."
 		/>
 		<meta property="og:image" content="Favicon" />
-		<link
-			rel="preload"
-			href="/fonts/Roboto.woff2"
-			as="font"
-			type="font/woff2"
-			crossorigin
-		/>
-		<link
-			rel="preload"
-			href="/fonts/Merriweather.woff2"
-			as="font"
-			type="font/woff2"
-			crossorigin
-		/>
 		<title>{title}</title>
 	</head>
 	<body>
