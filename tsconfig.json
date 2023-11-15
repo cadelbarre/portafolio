@@ -4,13 +4,13 @@
     "baseUrl": "/Users/carlosdelbarre/Documents/Projectos/3. Paginas Web /portafolio-astro",
     "paths": {
       "@components/*": [
-        "src/features/*"
+        "/src/features/*"
       ],
       "@assets/*": [
-        "public/assets/*"
+        "/public/assets/*"
       ],
       "@layouts/*": [
-        "src/layouts/*"
+        "/src/layouts/*"
       ]
     },
     "jsx": "react-jsx",
